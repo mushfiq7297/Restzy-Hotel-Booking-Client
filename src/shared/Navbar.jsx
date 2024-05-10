@@ -1,4 +1,36 @@
+
+import { Link, NavLink } from "react-router-dom";
+import "animate.css";
+import { AuthContext } from "../provider/AuthProvider";
+import { useContext } from "react";
+
+ 
+
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut().then().catch();
+  };
+    const navLinks = (
+    <>
+         <li >
+        <NavLink to="/">HOME</NavLink>
+      </li>
+      <li>
+        <NavLink to="/room">ROOM</NavLink>
+      </li>
+      <li>
+        <NavLink to="/myBookings">MY BOOKINGS </NavLink>
+      </li>
+      <li>
+        <NavLink to="/about">ABOUT</NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact">CONTACT</NavLink>
+      </li>
+      
+    </>
+    )
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -22,54 +54,48 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-60"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">Restzy</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+          {navLinks}
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+        {user ? (
+          <div>
+            <div
+              className="tooltip tooltip-left  flex gap-3"
+              data-tip={user?.displayName || user.email}
+            >
+              <div>
+              <img
+                src={user?.photoURL || "/src/assets/userDefaultPic.png"}
+                alt=""
+                className="w-8 h-8 mt-2 rounded-full "
+              />
+              </div>
+              <div>
+              <button
+                onClick={handleLogOut}
+                className="btn btn-active btn-primary h-8 mr-2"
+              >
+
+                SIGN OUT
+              </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <Link to="/login">
+            <button className="btn btn-primary mr-2">LOGIN</button>
+          </Link>
+        )}
         </div>
       </div>
     </div>
