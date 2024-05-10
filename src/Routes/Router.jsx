@@ -1,4 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
+import Main from "../layout/Main";
+import Home from "../pages/home/Home";
 
 const router = createBrowserRouter([
     {
@@ -12,3 +14,5 @@ const router = createBrowserRouter([
     ]
     },
   ]);
+
+  export default router;
