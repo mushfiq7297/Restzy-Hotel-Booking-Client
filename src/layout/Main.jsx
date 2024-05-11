@@ -4,10 +4,10 @@ import Navbar from "../shared/Navbar";
 const Main = () => {
   return (
     <div>
-      <div>
+      <div className="w-7xl mx-auto">
         <Navbar></Navbar>
       </div>
-      <div>
+      <div className="w-7xl mx-auto">
         <Outlet></Outlet>
       </div>
     </div>

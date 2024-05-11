@@ -1,0 +1,75 @@
+[
+    {
+      "image": "https://i.ibb.co/3Y3480k/image-01.jpg",
+      "description": "Deluxe Suite with Ocean View",
+      "price_per_night": 200,
+      "room_size": "400 sq ft",
+      "availability": true,
+      "special_offer": "Free breakfast included"
+    },
+    {
+      "image": "https://i.ibb.co/k2kHPF3/image-02.jpg",
+      "description": "Standard Room with City View",
+      "price_per_night": 120,
+      "room_size": "300 sq ft",
+      "availability": false,
+      "special_offer": "10% off for 3 nights or more"
+    },
+    {
+      "image": "https://i.ibb.co/L0vGBGM/image-03.jpg",
+      "description": "Executive Suite with Terrace",
+      "price_per_night": 300,
+      "room_size": "500 sq ft",
+      "availability": true,
+      "special_offer": "Complimentary spa session"
+    },
+    {
+      "image": "https://i.ibb.co/GQdp8B8/image-04.png",
+      "description": "Family Room with Mountain View",
+      "price_per_night": 250,
+      "room_size": "450 sq ft",
+      "availability": true,
+      "special_offer": "Free parking"
+    },
+    {
+      "image": "https://i.ibb.co/kcMp8SD/image-05.jpg",
+      "description": "Penthouse Suite with Panoramic View",
+      "price_per_night": 500,
+      "room_size": "800 sq ft",
+      "availability": false,
+      "special_offer": "Complimentary champagne upon arrival"
+    },
+    {
+      "image": "https://i.ibb.co/ZTBnNvB/image-06.jpg",
+      "description": "Luxury Villa with Private Pool",
+      "price_per_night": 800,
+      "room_size": "1000 sq ft",
+      "availability": true,
+      "special_offer": "Free airport transfer"
+    },
+    {
+      "image": "https://i.ibb.co/bKPf2Zy/image-07.jpg",
+      "description": "Studio Apartment with Garden View",
+      "price_per_night": 150,
+      "room_size": "250 sq ft",
+      "availability": true,
+      "special_offer": "10% off for direct bookings"
+    },
+    {
+      "image": "https://i.ibb.co/RPxx1v9/image-08.jpg",
+      "description": "Chalet with Fireplace",
+      "price_per_night": 400,
+      "room_size": "600 sq ft",
+      "availability": false,
+      "special_offer": "Free ski passes"
+    },
+    {
+      "image": "https://i.ibb.co/CsZVtDh/image-09.jpg",
+      "description": "Boutique Room with Courtyard View",
+      "price_per_night": 180,
+      "room_size": "350 sq ft",
+      "availability": true,
+      "special_offer": "Complimentary guided city tour"
+    }
+  ]
+  

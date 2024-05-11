@@ -32,7 +32,7 @@ import { createContext, useEffect, useState } from "react";
   
     useEffect(() => {
       const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-        console.log("user in onAuthstate changed", currentUser);
+       
         setUser(currentUser);
         setLoading(false);
       });
