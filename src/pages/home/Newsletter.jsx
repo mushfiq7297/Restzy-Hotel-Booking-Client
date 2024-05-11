@@ -2,7 +2,7 @@ const Newsletter = () => {
   return (
     <div>
       <div
-        className="hero my-4 h-96"
+        className="hero mt-4 h-96"
         style={{
           backgroundImage:
             "url(https://i.ibb.co/k2kHPF3/image-02.jpg)",

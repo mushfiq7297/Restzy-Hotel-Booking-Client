@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
     return (
-        <div>
+        <div className="mt-10">
         <h2 className="text-center font-bold text-3xl md:text-6xl font-stack my-12">About Us</h2>
       <div className="hero">
       <div className="hero-content flex-col lg:flex-row gap-10 justify-between">
