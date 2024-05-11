@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const RoomCard = ({room}) => {
-    const {image,description} = room
+    const {image,description, _id} = room
   return (
     <div>
       <div className="card w-96 bg-base-100 hover:scale-95 hover:-translate-y-1 duration-300 hover:shadow-xl ">
@@ -14,7 +16,9 @@ const RoomCard = ({room}) => {
           <h2 className="card-title">{description}</h2>
          
           <div className="my-2">
+            <Link to={`/roomDetails/${_id}`}>
             <button className="btn btn-wide btn-primary hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">BOOK NOW</button>
+            </Link>
           </div>
         </div>
       </div>
