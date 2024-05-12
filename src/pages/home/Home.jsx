@@ -1,8 +1,10 @@
 import Banner from "./Banner";
 import FeaturedRoom from "./FeaturedRoom";
-import Newsletter from "./Newsletter";
+
 import About from "./about/About";
 import Contact from "./about/Contact";
+import MyMap from "./map/MyMap";
+
 import Testimonials from "./testimonials/Testimonials";
 
 
@@ -14,7 +16,7 @@ const Home = () => {
             <About></About>
             <Contact></Contact>
             <Testimonials></Testimonials>
-            
+            <MyMap></MyMap>                       
         </div>
     );
 };
