@@ -3,6 +3,7 @@ import FeaturedRoom from "./FeaturedRoom";
 import Newsletter from "./Newsletter";
 import About from "./about/About";
 import Contact from "./about/Contact";
+import Testimonials from "./testimonials/Testimonials";
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <FeaturedRoom></FeaturedRoom>
             <About></About>
             <Contact></Contact>
+            <Testimonials></Testimonials>
             
         </div>
     );

@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 const About = () => {
     return (
-        <div className="mt-10">
-        <h2 className="text-center font-bold text-3xl md:text-6xl font-stack my-12">About Us</h2>
+        <div className="min-h-screen">
+        <div className="flex justify-center">
+            <h2 className="text-5xl font-bold my-10 w-56 text-center border-b-4 border-blue-500">About us</h2>
+            </div>
       <div className="hero">
       <div className="hero-content flex-col lg:flex-row gap-10 justify-between">
         <div className="w-full md:w-1/2">

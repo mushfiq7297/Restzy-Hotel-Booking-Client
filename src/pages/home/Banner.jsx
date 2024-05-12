@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="mt-5">
+    <div className="">
       <div
         className="hero min-h-screen"
         style={{

@@ -13,7 +13,7 @@ const RoomCard = ({room}) => {
           />
         </figure>
         <div className="card-body items-center text-center h-52">
-          <h2 className="card-title">{description}</h2>
+          <h2 className=" text-lg font-bold">{description}</h2>
          
           <div className="my-2">
             <Link to={`/roomDetails/${_id}`}>
