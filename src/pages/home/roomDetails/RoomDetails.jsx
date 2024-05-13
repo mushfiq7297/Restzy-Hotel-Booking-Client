@@ -43,10 +43,12 @@ const RoomDetails = () => {
       console.log(data);
       if (data.insertedId) {
         Swal.fire({
-          title: "Success!",
-          text: "Tourists spot added successfully",
-          icon: "success",
-          confirmButtonText: "Cool",
+          title: `${description}`,
+          text: `Price:$${price}`,
+          imageUrl: `${image}`,
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: "Custom image"
         });
        
       }

@@ -7,12 +7,14 @@ import RoomDetails from "../pages/home/roomDetails/RoomDetails";
 import About from "../pages/home/about/About";
 import Contact from "../pages/home/about/Contact";
 import FeaturedRoom from "../pages/home/FeaturedRoom";
+import ErrorPage from "../errorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
       {
         path: "/",
