@@ -1,5 +1,35 @@
-const BookingRow = ({ bookingRoom }) => {
-  const { image, roomName, price, date } = bookingRoom;
+import { GiCheckMark } from "react-icons/gi";
+import Swal from "sweetalert2";
+
+const BookingRow = ({ bookingRoom, bookings, setBookings }) => {
+  const { image, roomName, price, date ,_id} = bookingRoom;
+  const handleDelete = (_id) => {
+    console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/booking/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your Spot has been deleted.", "success");
+              const remaining = bookings.filter((booking) => (booking._id = _id));
+              setBookings(remaining);
+            }
+          });
+      }
+    });
+  };
   return (
     <tr className="shadow-md gap-3">
       <td>
@@ -19,7 +49,7 @@ const BookingRow = ({ bookingRoom }) => {
         </div>
       </td>
       <th>
-        <form>
+        <form className="flex gap-2">
           <div className="form-control">
             <input
               type="date"
@@ -30,11 +60,14 @@ const BookingRow = ({ bookingRoom }) => {
               required
             />
           </div>
+          <button className="btn btn-square btn-outline">
+          <GiCheckMark />
+          </button>
         </form>
       </th>
       <th></th>
       <th>
-        <button className="btn btn-square btn-outline">
+        <button onClick={() => handleDelete(_id)}  className="btn btn-square btn-outline" >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
