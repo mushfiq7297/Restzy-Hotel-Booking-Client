@@ -12,8 +12,11 @@ const RoomCard = ({room}) => {
             className="rounded-xl object-cover h-52"
           />
         </figure>
-        <div className="card-body items-center text-center h-52">
+        <div className="card-body items-center text-center">
           <h2 className=" text-lg font-bold">{description}</h2>
+          <p>
+          As our smallest budget rooms, the Compact bedrooms are suited for single occupancy or short-stay double occupancy as they have limited space and storage.
+          </p>
          
           <div className="my-2">
             <Link to={`/roomDetails/${_id}`}>

@@ -1,7 +1,9 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const RoomDetails = () => {
   const room = useLoaderData();
+
 
   const {
     image,
@@ -11,6 +13,46 @@ const RoomDetails = () => {
     availability,
     special_offer,
   } = room;
+
+  const handleBppkService = event =>{
+    event.preventDefault()
+
+    const form = event.target;
+
+    const name = form.name.value;
+    const price = form.price.value;
+    const date = form.date.value;
+
+    const booking ={
+      roomName: name,
+      price,
+      date,
+      image,
+    }
+    console.log(booking);
+
+    fetch("http://localhost:5000/booking", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(booking),
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      if (data.insertedId) {
+        Swal.fire({
+          title: "Success!",
+          text: "Tourists spot added successfully",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
+       
+      }
+    });
+
+  }
   return (
     <div className="my-10">
       <div className=" p-4 shadow-md bg-gray-300  text-black rounded-lg">
@@ -41,32 +83,74 @@ const RoomDetails = () => {
             </h3>
           </a>
           <div className="space-y-2 flex flex-col md:flex-row justify-between">
-            <p className=" text-black w-1/2 flex justify-center px-10">
-              The 4-star Park Central Hotel offers comfort and convenience
-              whether you’re on business or holiday in New York (NY). Featuring
-              a complete list of amenities, guests will find their stay at the
-              property a comfortable one. Service-minded staff will welcome and
-              guide you at the Park Central Hotel. Air conditioning, heating,
-              desk, alarm clock, iPod docking station can be found in selected
-              guestrooms. The hotel offers various recreational opportunities.
-              Park Central Hotel combines warm hospitality with a lovely
-              ambiance to make your stay in New York (NY) unforgettable. Once
-              inside the historic palace located on the Right Bank of the Seine,
-              see unmissable and iconic sights Once inside the historic palace
-              located on the Right Bank of the Seine, see unmissable and iconic
-              sights such as the Mona Lisa and Venus de Milo. Discover
-              masterpieces of the Renaissance and ancient Egyptian relics, along
-              with paintings from the 13th to 20th centuries, prints from the
-              Royal Collection, and much more such as the Mona Lisa and Venus de
-              Milo. Discover masterpieces of the Renaissance and ancient
-              Egyptian relics, along with paintings from the 13th to 20th
-              centuries, prints from the Royal Collection, and much more.
-            </p>
-            <div className="flex w-1/2  justify-end">
-              <div className="flex flex-col mx-10 shadow-sm rounded-xl lg:p-12 bg-gray-600 text-gray-100 ">
+            <div className="w-full md:w-1/2 flex flex-col space-y-2">
+              <p className=" text-black  px-10">
+                The 4-star Park Central Hotel offers comfort and convenience
+                whether you’re on business or holiday in New York (NY).
+                Featuring a complete list of amenities, guests will find their
+                stay at the property a comfortable one. Service-minded staff
+                will welcome and guide you at the Park Central Hotel. Air
+                conditioning, heating, desk, alarm clock, iPod docking station
+                can be found in selected guestrooms. The hotel offers various
+                recreational opportunities. Park Central Hotel combines warm
+                hospitality with a lovely ambiance to make your stay in New York
+                (NY) unforgettable.
+              </p>
+             <div className="px-10">
+             <form onSubmit={handleBppkService}>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text font-bold text-xl">Name</span>
+                  </label>
+                  <input
+                    type="name"
+                    placeholder=""
+                    name= "name"
+                    defaultValue={description}
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text font-bold text-xl">Price($)</span>
+                  </label>
+                  <input
+                    type="number"
+                    name ="price"                    
+                    defaultValue={price_per_night}
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                
+
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text font-bold text-xl">Date</span>
+                  </label>
+                  <input
+                    type="date"
+                    placeholder="Date"
+                    name ="date"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="my-5">
+                  <button className="btn btn-block btn-primary" type="submit">
+                    BOOK NOW
+                  </button>
+                </div>
+              </form>
+             </div>
+            </div>
+
+            <div className="flex w-full md:w-1/2">
+              <div className="flex flex-col mx-auto shadow-sm rounded-xl lg:p-12 bg-gray-600 text-gray-100 ">
                 <div className="flex flex-col items-center w-full">
                   <h2 className="text-3xl font-semibold text-center">
-                   Add a review
+                    Add a review
                   </h2>
                   <div className="flex flex-col items-center py-6 space-y-3">
                     <span className="text-center">
@@ -169,14 +253,10 @@ const RoomDetails = () => {
                   </a>
                 </div>
               </div>
-            </div>           
+            </div>
           </div>
         </div>
-        <div className="my-10">
-            <button className="btn btn-block btn-primary">BOOK NOW</button>
-            </div>
       </div>
-      
     </div>
   );
 };
