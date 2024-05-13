@@ -1,35 +1,50 @@
 import { GiCheckMark } from "react-icons/gi";
 import Swal from "sweetalert2";
 
-const BookingRow = ({ bookingRoom, bookings, setBookings }) => {
+const BookingRow = ({ bookingRoom, bookings, setBookings, handleDelete }) => {
   const { image, roomName, price, date ,_id} = bookingRoom;
-  const handleDelete = (_id) => {
-    console.log(_id);
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        fetch(`http://localhost:5000/booking/${_id}`, {
-          method: "DELETE",
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            if (data.deletedCount > 0) {
-              Swal.fire("Deleted!", "Your Spot has been deleted.", "success");
-              const remaining = bookings.filter((booking) => (booking._id = _id));
-              setBookings(remaining);
-            }
+
+ 
+ 
+//..........................update..........................
+
+const handleUpdateDate= (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+
+    const date = form.date.value;
+
+    const updateDate = {
+      date
+    };
+    console.log(updateDate)
+    
+
+    // //sending data to the server
+    fetch(`http://localhost:5000/booking/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateDate),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount >0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Tourists spot Updated successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
           });
-      }
-    });
+        }
+      });
   };
+
+
+  
   return (
     <tr className="shadow-md gap-3">
       <td>
@@ -49,7 +64,7 @@ const BookingRow = ({ bookingRoom, bookings, setBookings }) => {
         </div>
       </td>
       <th>
-        <form className="flex gap-2">
+        <form onSubmit={handleUpdateDate} className="flex gap-2" >
           <div className="form-control">
             <input
               type="date"
@@ -60,7 +75,7 @@ const BookingRow = ({ bookingRoom, bookings, setBookings }) => {
               required
             />
           </div>
-          <button className="btn btn-square btn-outline">
+          <button type="submit" className="btn btn-square btn-outline">
           <GiCheckMark />
           </button>
         </form>
