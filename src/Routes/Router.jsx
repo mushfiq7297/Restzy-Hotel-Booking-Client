@@ -8,6 +8,8 @@ import About from "../pages/home/about/About";
 import Contact from "../pages/home/about/Contact";
 import FeaturedRoom from "../pages/home/FeaturedRoom";
 import ErrorPage from "../errorPage/ErrorPage";
+import MyBookings from "../myBookings/MyBookings";
+import PrivateRouter from "../Routes/PrivateRouter"
 
 
 const router = createBrowserRouter([
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/roomDetails/:id",
-        element: <RoomDetails></RoomDetails>,
+        element: <PrivateRouter><RoomDetails></RoomDetails></PrivateRouter>,
         loader: ({params}) => fetch(`http://localhost:5000/rooms/${params.id}`)
       },
       {
@@ -44,6 +46,12 @@ const router = createBrowserRouter([
       {
         path: "/room",
         element:<FeaturedRoom></FeaturedRoom>
+      },
+      {
+        path: "/myBookings",
+        element:<PrivateRouter><MyBookings></MyBookings></PrivateRouter>,
+        loader:() => fetch('http://localhost:5000/booking')
+
       }
 
     ]
