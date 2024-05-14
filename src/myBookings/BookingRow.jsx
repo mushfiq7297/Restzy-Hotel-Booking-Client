@@ -33,7 +33,7 @@ const BookingRow = ({ bookingRoom, bookings, setBookings, handleDelete }) => {
         if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
-            text: "Tourists spot Updated successfully",
+            text: "Date has Updated successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });

@@ -8,7 +8,7 @@ import Testimonials from "../pages/home/testimonials/Testimonials";
 
 const Main = () => {
   return (
-    <div>
+    <div className="font-EbGaramond">
       <div>
         <Navbar></Navbar>
         

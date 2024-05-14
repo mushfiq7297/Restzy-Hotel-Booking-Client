@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import RoomCard from "./RoomCard";
-
+import 'animate.css';
 
 const FeaturedRoom = () => {
     const [rooms, setRooms] = useState([]);
@@ -12,7 +12,7 @@ const FeaturedRoom = () => {
 
     },[])
     return (
-        <div className="w-10/12 mx-auto">
+        <div className="w-10/12 mx-auto animate__animated animate__pulse animate__delay-2s">
             <div className="flex justify-center">
             <h2 className="text-5xl font-bold my-10 w-48 border-b-4 text-center border-blue-500">Rooms</h2>
             </div>

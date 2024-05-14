@@ -1,6 +1,8 @@
+import "animate.css"
+
 const Newsletter = () => {
   return (
-    <div>
+    <div className="animate__animated animate__slideInLeft animate__delay-2s">
       <div
         className="hero h-96"
         style={{

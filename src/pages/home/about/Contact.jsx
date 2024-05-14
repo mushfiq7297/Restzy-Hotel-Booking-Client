@@ -1,10 +1,10 @@
 
-
+import "animate.css"
 const Contact = () => {
     return (
-        <div className='mt-16'>
+        <div className='mt-16 animate__animated animate__slideInRight animate'>
           <div className="flex justify-center">
-            <h2 className="text-5xl font-bold my-10 w-48 border-b-4 border-blue-500">Contact</h2>
+            <h2 className="text-5xl font-bold my-10 w-40 border-b-4 border-blue-500">Contact</h2>
             </div>
       <div className="hero min-h-screen items-start">
         <div className="hero-content flex-col lg:flex-row">

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-
+import "animate.css"
 const About = () => {
   return (
-    <div className=" w-10/12 mx-auto">
+    <div className="min-h-screen w-10/12 mx-auto animate__animated animate__slideInLeft animate">
       <div className="flex justify-center">
         <h2 className="text-5xl font-bold my-10 w-56 text-center border-b-4 border-blue-500">
           About us
