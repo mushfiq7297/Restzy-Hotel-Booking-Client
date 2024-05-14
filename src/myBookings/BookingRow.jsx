@@ -1,14 +1,13 @@
 import { GiCheckMark } from "react-icons/gi";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const BookingRow = ({ bookingRoom, bookings, setBookings, handleDelete }) => {
-  const { image, roomName, price, date ,_id} = bookingRoom;
+  const { image, roomName, price, date, _id } = bookingRoom;
 
- 
- 
-//..........................update..........................
+  //..........................update..........................
 
-const handleUpdateDate= (event) => {
+  const handleUpdateDate = (event) => {
     event.preventDefault();
 
     const form = event.target;
@@ -16,10 +15,9 @@ const handleUpdateDate= (event) => {
     const date = form.date.value;
 
     const updateDate = {
-      date
+      date,
     };
-    console.log(updateDate)
-    
+    console.log(updateDate);
 
     // //sending data to the server
     fetch(`http://localhost:5000/booking/${_id}`, {
@@ -32,7 +30,7 @@ const handleUpdateDate= (event) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.modifiedCount >0) {
+        if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
             text: "Tourists spot Updated successfully",
@@ -43,8 +41,6 @@ const handleUpdateDate= (event) => {
       });
   };
 
-
-  
   return (
     <tr className="shadow-md gap-3">
       <td>
@@ -64,7 +60,7 @@ const handleUpdateDate= (event) => {
         </div>
       </td>
       <th>
-        <form onSubmit={handleUpdateDate} className="flex gap-2" >
+        <form onSubmit={handleUpdateDate} className="flex gap-2">
           <div className="form-control">
             <input
               type="date"
@@ -76,13 +72,16 @@ const handleUpdateDate= (event) => {
             />
           </div>
           <button type="submit" className="btn btn-square btn-outline">
-          <GiCheckMark />
+            <GiCheckMark />
           </button>
         </form>
       </th>
       <th></th>
       <th>
-        <button onClick={() => handleDelete(_id)}  className="btn btn-square btn-outline" >
+        <button
+          onClick={() => handleDelete(_id)}
+          className="btn btn-square btn-outline"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -98,6 +97,14 @@ const handleUpdateDate= (event) => {
             />
           </svg>
         </button>
+      </th>
+      <th></th>
+      <th>
+        <Link to={`/reviews/${_id}`}>
+        <button className="btn btn-square btn-outline w-20">
+         Review
+        </button>
+        </Link>
       </th>
     </tr>
   );

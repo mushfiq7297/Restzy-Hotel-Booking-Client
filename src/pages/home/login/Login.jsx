@@ -7,6 +7,7 @@ import { FiEyeOff } from "react-icons/fi";
 
 import "animate.css";
 import { AuthContext } from "../../../provider/AuthProvider";
+import axios from "axios";
 
 
 const Login = () => {
@@ -28,10 +29,21 @@ const Login = () => {
     setLoginSuccess("");
     logIn(email, password)
       .then((result) => {
-        const User = result.user;
-        navigate(location?.state ? location.state : "/");
+        const loggedInUser = result.user;
+        console.log(loggedInUser);
+        const user ={email}
+
+        //get access token
+        axios.post('http://localhost:5000/jwt',loggedInUser, {withCredentials : true})
+          .then(res => {
+            console.log(res.data)
+            if(res.success.data){
+              navigate(location?.state ? location.state : "/");
+            }
+          })
+        
         setLoginSuccess(alert("User login successfully"));
-        console.log(result);
+        
         //navigate after login
       })
       .catch((error) => {

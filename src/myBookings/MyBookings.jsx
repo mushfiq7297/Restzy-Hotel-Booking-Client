@@ -9,8 +9,8 @@ const MyBookings = () => {
   const [bookings, setBookings] = useState(bookingRooms);
  
 //..........................delete...........................
-  const handleDelete = (_id) => {
-    console.log(_id);
+  const handleDelete = (id) => {
+   
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -21,7 +21,7 @@ const MyBookings = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/booking/${_id}`, {
+        fetch(`http://localhost:5000/booking/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -29,7 +29,7 @@ const MyBookings = () => {
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your Spot has been deleted.", "success");
-              const remaining = bookings.filter((booking) => (booking._id = _id));
+              const remaining = bookings.filter((booking) => (booking._id !== id));
               setBookings(remaining);
             }
           });
@@ -56,7 +56,8 @@ const MyBookings = () => {
                 <th className="font-bold text-lg text-gray-600">Update(Date)</th>
                 <th></th>
                 <th className="font-bold text-lg text-gray-600">Cancel</th>
-                
+                <th></th>
+                <th className="font-bold text-lg text-gray-600">Review</th>
               </tr>
             </thead>
             <tbody>
