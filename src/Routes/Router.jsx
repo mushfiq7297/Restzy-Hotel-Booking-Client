@@ -11,6 +11,7 @@ import ErrorPage from "../errorPage/ErrorPage";
 import MyBookings from "../myBookings/MyBookings";
 import PrivateRouter from "../Routes/PrivateRouter"
 import Reviews from "../reviews/Reviews";
+import Testimonials from "../pages/home/testimonials/Testimonials";
 
 
 const router = createBrowserRouter([
@@ -58,7 +59,13 @@ const router = createBrowserRouter([
       {
         path: "/reviews/:id",
         element:<Reviews></Reviews>
+      },
+      {
+        path:"/testimonials",
+        element: <Testimonials></Testimonials>,
+        loader:()=> fetch('http://localhost:5000/reviews')
       }
+
 
     ]
     },
