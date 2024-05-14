@@ -40,7 +40,7 @@ const MyBookings = () => {
 
 
   return (
-    <div className="min-h-screen mb-40">
+    <div className="min-h-screen w-10/12 mx-auto">
       <div className="flex justify-center">
         <h2 className="text-4xl font-bold my-10 w-60 border-b-4 text-center border-blue-500">
           My Bookings

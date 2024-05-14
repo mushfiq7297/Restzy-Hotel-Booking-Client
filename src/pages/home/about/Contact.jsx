@@ -1,8 +1,8 @@
-import React from 'react';
+
 
 const Contact = () => {
     return (
-        <div>
+        <div className='mt-16'>
           <div className="flex justify-center">
             <h2 className="text-5xl font-bold my-10 w-48 border-b-4 border-blue-500">Contact</h2>
             </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className=" w-10/12 mx-auto">
       <div className="flex justify-center">
         <h2 className="text-5xl font-bold my-10 w-56 text-center border-b-4 border-blue-500">
           About us

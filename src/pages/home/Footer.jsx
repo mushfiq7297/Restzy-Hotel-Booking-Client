@@ -9,9 +9,7 @@ const Footer = () => {
               href="#"
               className="flex justify-center space-x-3 lg:justify-start"
             >
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-violet-400">
-                
-              </div>
+              
               <span className="self-center text-2xl font-semibold">
                 Restzy
               </span>

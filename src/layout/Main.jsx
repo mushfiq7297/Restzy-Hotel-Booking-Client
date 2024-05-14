@@ -2,18 +2,22 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../shared/Navbar";
 import Footer from "../pages/home/Footer";
 import Newsletter from "../pages/home/Newsletter";
+import Banner from "../pages/home/Banner";
+import MyMap from "../pages/home/map/MyMap";
+import Testimonials from "../pages/home/testimonials/Testimonials";
 
 const Main = () => {
   return (
     <div>
-      <div className="w-7xl mx-auto">
+      <div>
         <Navbar></Navbar>
+        
       </div>
-      <div className="w-7xl mx-auto">
+      <div >
         <Outlet></Outlet>
       </div>
       <div>
-        <Newsletter></Newsletter>
+        
         <Footer></Footer>
       </div>
     </div>
