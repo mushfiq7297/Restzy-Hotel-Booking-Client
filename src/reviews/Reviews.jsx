@@ -26,7 +26,7 @@ const Reviews = () => {
     console.log(addReview);
 
     // //sending data to the server
-    fetch(`http://localhost:5000/reviews`, {
+    fetch(`https://hotel-booking-server-smoky.vercel.app/reviews`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -48,7 +48,7 @@ const Reviews = () => {
       });
   };
   return (
-    <div className="flex justify-center my-3">
+    <div className="flex justify-center my-3 pt-20">
       <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 bg-gray-900 text-gray-100">
         <div className="flex flex-col items-center w-full">
           <h2 className="text-3xl font-semibold text-center">Add a review</h2>

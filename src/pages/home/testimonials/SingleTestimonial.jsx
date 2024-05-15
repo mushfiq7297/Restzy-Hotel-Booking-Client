@@ -1,6 +1,4 @@
-import Swiper from "swiper";
-import { Pagination } from "swiper/modules";
-import { SwiperSlide } from "swiper/react";
+
 
 
 const SingleTestimonial = ({onereview}) => {

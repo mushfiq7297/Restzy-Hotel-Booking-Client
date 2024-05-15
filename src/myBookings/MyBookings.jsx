@@ -1,14 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import BookingRow from "./BookingRow";
 import Swal from "sweetalert2";
 import "animate.css"
-import Availableroom from "../pages/home/avilabilityBasedRoom/Availableroom";
-import Unavailableroom from "../pages/home/unavailableRoom/UnavailableRoom";
+
 
 const MyBookings = () => {
-  const bookingRooms = useLoaderData();
-  const [bookings, setBookings] = useState(bookingRooms);
+  // const bookingRooms = useLoaderData();
+  const [bookings, setBookings] = useState([]);
+const [isUpdate, setIsUpdate] =useState(true);
+  useEffect(()=>{
+    fetch("https://hotel-booking-server-smoky.vercel.app/booking")
+    .then(res => res.json())
+    .then(data => setBookings(data))
+  },[isUpdate])
+
+  const refetch = ()=>{
+    setIsUpdate(!isUpdate)
+  }
  
 //..........................delete...........................
   const handleDelete = (id) => {
@@ -23,7 +32,7 @@ const MyBookings = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/booking/${id}`, {
+        fetch(`https://hotel-booking-server-smoky.vercel.app/booking/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -31,8 +40,9 @@ const MyBookings = () => {
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your Spot has been deleted.", "success");
-              const remaining = bookings.filter((booking) => (booking._id !== id));
-              setBookings(remaining);
+              // const remaining = bookings.filter((booking) => (booking._id !== id));
+              // setBookings(remaining);
+              refetch()
             }
           });
       }
@@ -63,7 +73,7 @@ const MyBookings = () => {
               </tr>
             </thead>
             <tbody>
-            {bookingRooms.map((bookingRoom) => (
+            {bookings.map((bookingRoom) => (
                 <BookingRow
                   key={bookingRoom._id}
                   bookingRoom ={bookingRoom}

@@ -20,7 +20,7 @@ const BookingRow = ({ bookingRoom, bookings, setBookings, handleDelete }) => {
     console.log(updateDate);
 
     // //sending data to the server
-    fetch(`http://localhost:5000/booking/${_id}`, {
+    fetch(`https://hotel-booking-server-smoky.vercel.app/booking/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
