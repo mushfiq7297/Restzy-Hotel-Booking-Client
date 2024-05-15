@@ -53,11 +53,11 @@ const RoomDetails = () => {
       });
   };
   return (
-    <div className="my-10">
+    <div className="w-10/12 pt-20 mx-auto pb-10">
       <div className=" p-4 shadow-md bg-gray-300  text-black rounded-lg">
         <div className="space-y-4">
           <a rel="noopener noreferrer" href="#" className="block">
-            <h3 className="text-xl font-bold text-violet-600">
+            <h3 className="text-3xl font-bold text-violet-600">
               {description}
             </h3>
           </a>
@@ -79,7 +79,7 @@ const RoomDetails = () => {
           
           <div className="flex flex-col md:flex-row lg:flex-row justify-between ">
             <div className="w-full md:w-3/5  flex flex-col md:flex-row lg:flex-row  ">
-              <p className=" text-black  px-10">
+              <p className=" text-black text-xl px-10">
                 <span className="text-2xl font-bold text-violet-600 mb-10"> Description</span><br></br>
                 The 4-star Park Central Hotel offers comfort and convenience
                 whether you’re on business or holiday in New York (NY).

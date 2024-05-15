@@ -15,7 +15,7 @@ const Testimonials = () => {
   return (
     <div className="">
       <div className="flex justify-center">
-        <h2 className="text-5xl font-bold my-10 w-72 text-center border-b-4 border-blue-500">
+        <h2 className="text-5xl font-bold my-10 pt-20 w-72 text-center border-b-2 border-blue-500">
           Testimonials
         </h2>
       </div>

@@ -2,11 +2,11 @@
 import "animate.css"
 const Contact = () => {
     return (
-        <div className='mt-16 animate__animated animate__slideInRight animate'>
+        <div className='animate__animated animate__slideInRight animate'>
           <div className="flex justify-center">
-            <h2 className="text-5xl font-bold my-10 w-40 border-b-4 border-blue-500">Contact</h2>
+            <h2 className="text-5xl font-bold my-10 pt-20 w-40 border-b-2 border-blue-500">Contact</h2>
             </div>
-      <div className="hero min-h-screen items-start">
+      <div className="hero items-start">
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left bg-[url('https://i.ibb.co/RPxx1v9/image-08.jpg')]  h-[473px] bg-cover items-center py-10 px-10 rounded-lg shadow-lg">
             <h1 className="p-5 text-2xl md:text-5xl font-bold text-white">Need to contact us?</h1>

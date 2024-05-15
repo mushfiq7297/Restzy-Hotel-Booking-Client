@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import "animate.css";
 import { AuthContext } from "../provider/AuthProvider";
 import { useContext } from "react";
-
+import "animate.css"
  
 
 const Navbar = () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
         <NavLink to="/">HOME</NavLink>
       </li>
       <li>
-        <NavLink to="/room">ROOM</NavLink>
+        <NavLink to="/room">ROOMS</NavLink>
       </li>
       <li>
         <NavLink to="/myBookings">MY BOOKINGS </NavLink>
@@ -31,9 +31,8 @@ const Navbar = () => {
       
     </>
     )
-  return (
-    <div>
-      <div className="navbar  bg-[#1f2937] text-[#9ca3af]">
+  return ( 
+      <div className="navbar fixed px-4 z-10 shadow-lg  top-0  bg-gray-900 text-white animate__animated animate__slideInDown animate">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,12 +53,12 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-60"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-900 rounded-box text-white w-60"
             >
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Restzy</a>
+          <a className="btn btn-ghost text-2xl">Restzy</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -98,7 +97,6 @@ const Navbar = () => {
         )}
         </div>
       </div>
-    </div>
   );
 };
 

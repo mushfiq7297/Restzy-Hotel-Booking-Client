@@ -42,7 +42,7 @@ const BookingRow = ({ bookingRoom, bookings, setBookings, handleDelete }) => {
   };
 
   return (
-    <tr className="shadow-md gap-3">
+    <tr className="shadow-lg gap-3 rounded-lg border-2  ">
       <td>
         <div className="flex items-center gap-3">
           <div className="avatar">

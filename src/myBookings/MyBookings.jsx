@@ -3,6 +3,8 @@ import { useLoaderData } from "react-router-dom";
 import BookingRow from "./BookingRow";
 import Swal from "sweetalert2";
 import "animate.css"
+import Availableroom from "../pages/home/avilabilityBasedRoom/Availableroom";
+import Unavailableroom from "../pages/home/unavailableRoom/UnavailableRoom";
 
 const MyBookings = () => {
   const bookingRooms = useLoaderData();
@@ -40,13 +42,13 @@ const MyBookings = () => {
 
 
   return (
-    <div className="min-h-screen w-10/12 mx-auto animate__animated animate__slideInUp animate">
+    <div className="w-10/12 min-h-screen mx-auto animate__animated animate__slideInUp animate">
       <div className="flex justify-center">
-        <h2 className="text-4xl font-bold my-10 w-60 border-b-4 text-center border-blue-500">
+        <h2 className="text-4xl font-bold my-20 pt-10 w-60 border-b-2 text-center border-blue-500">
           My Bookings
         </h2>
       </div>
-      <div>
+      <div className="my-10">
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}
@@ -77,6 +79,7 @@ const MyBookings = () => {
           </table>
         </div>
       </div>
+      
     </div>
   );
 };

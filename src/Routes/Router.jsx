@@ -12,6 +12,8 @@ import MyBookings from "../myBookings/MyBookings";
 import PrivateRouter from "../Routes/PrivateRouter"
 import Reviews from "../reviews/Reviews";
 import Testimonials from "../pages/home/testimonials/Testimonials";
+import AvailableRoomCard from "../pages/home/avilabilityBasedRoom/AvailableRoomCard";
+import Availableroom from "../pages/home/avilabilityBasedRoom/Availableroom";
 
 
 const router = createBrowserRouter([
@@ -47,7 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/room",
-        element:<FeaturedRoom></FeaturedRoom>
+        element:<Availableroom></Availableroom>
       },
       {
         path: "/myBookings",

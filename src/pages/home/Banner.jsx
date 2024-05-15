@@ -4,10 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
+import "animate.css"
 
 const Banner = () => {
   return (
-    <div className="">
+    <div className="animate__animated animate__slideInLeft animate">
       <Swiper
         autoplay={true}
         modules={[Autoplay]}

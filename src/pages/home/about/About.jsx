@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import "animate.css"
 const About = () => {
   return (
-    <div className="min-h-screen w-10/12 mx-auto animate__animated animate__slideInLeft animate">
+    <div className=" w-10/12 min-h-screen mx-auto animate__animated animate__slideInLeft animate">
       <div className="flex justify-center">
-        <h2 className="text-5xl font-bold my-10 w-56 text-center border-b-4 border-blue-500">
+        <h2 className="text-5xl font-bold my-10 pt-20 w-56 text-center border-b-2 border-blue-500">
           About us
         </h2>
       </div>
-      <div className="hero">
+      <div className="hero my-10">
         <div className="hero-content flex-col lg:flex-row gap-10 justify-between">
           <div className="w-full md:w-1/2">
             <img
