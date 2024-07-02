@@ -10,10 +10,9 @@
       <li>User Reviews and Ratings: Allow users to leave reviews and ratings for hotels, helping others make informed decisions.</li>
       <li>Booking History: Users can view their booking history, manage current reservations, and make changes if needed.</li>
       <li>Responsive Design: Optimized for both desktop and mobile devices to ensure a seamless experience across all platforms.</li>
-      <li>Admin Dashboard: Administrative panel for managing hotel listings, bookings, user accounts, and platform analytics.</li>
-      
+      <li>Admin Dashboard: Administrative panel for managing hotel listings, bookings, user accounts, and platform analytics.</li>    
     </ul>
-
+    
 <h3>Technology used:</h3>
 ReactJS | TailwindCSS | ExpressJS | MongoDB | JWT  |  Swiper | Axios
 </p>
