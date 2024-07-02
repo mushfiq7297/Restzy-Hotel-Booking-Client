@@ -1,7 +1,7 @@
 <h2>Live Link: <a href="https://sunny-queijadas-e153d1.netlify.app/">Restzy</a></h2>
 <h2>Server Side Code: <a href="https://sunny-queijadas-e153d1.netlify.app/](https://github.com/mushfiq7297/Restzy-Hotel-Booking-Server">Server</a></h2>
 <h1>Project Overview:</h1>
-<p>Travelo aims to provide a seamless and intuitive booking experience across devices, ensuring that users can effortlessly find and reserve hotel rooms that meet their preferences and needs. Leveraging cutting-edge technologies, we aim to enhance user experiences and set a new standard in the online hotel booking industry.</p>
+<p>Restzy aims to provide a seamless and intuitive booking experience across devices, ensuring that users can effortlessly find and reserve hotel rooms that meet their preferences and needs. Leveraging cutting-edge technologies, we aim to enhance user experiences and set a new standard in the online hotel booking industry.</p>
 
 <h3>Features:</h3>
 <ul>
