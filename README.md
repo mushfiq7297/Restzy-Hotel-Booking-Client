@@ -3,17 +3,19 @@
 <h1>Project Overview:</h1>
 <p>Restzy aims to provide a seamless and intuitive booking experience across devices, ensuring that users can effortlessly find and reserve hotel rooms that meet their preferences and needs. Leveraging cutting-edge technologies, we aim to enhance user experiences and set a new standard in the online hotel booking industry.</p>
 
-<h3>Features:</h3>
-ReactJS | TailwindCSS | ExpressJS | MongoDB | JWT  |  Swiper | Axios
+<h3>Main Features:</h3>
+<ul>
+      <li>User Authentication: Secure user authentication and authorization using Firebase and JWT tokens.</li>
+      <li>Room Availability and Booking: Real-time room availability checks and booking functionality, ensuring users can make reservations with confidence.</li>
+      <li>User Reviews and Ratings: Allow users to leave reviews and ratings for hotels, helping others make informed decisions.</li>
+      <li>Booking History: Users can view their booking history, manage current reservations, and make changes if needed.</li>
+      <li>Responsive Design: Optimized for both desktop and mobile devices to ensure a seamless experience across all platforms.</li>
+      <li>Admin Dashboard: Administrative panel for managing hotel listings, bookings, user accounts, and platform analytics.</li>
+      
+    </ul>
 
 <h3>Technology used:</h3>
-<ul>
-  <li>React: For building a dynamic and responsive user interface.</li>
-  <li>Firebase: For user authentication and real-time database.</li>
-  <li>React Router: For handling navigation and routing within the application.</li>
-  <li>Node.js & Express: For server-side logic and API development.</li>
-  <li>MongoDB: For storing user data, articles, and other related information.</li>
-</ul>
+ReactJS | TailwindCSS | ExpressJS | MongoDB | JWT  |  Swiper | Axios
 </p>
 
 <h3>Installation and Setup:</h3>
