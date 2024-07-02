@@ -1,16 +1,24 @@
 <h2>Live Link: <a href="https://sunny-queijadas-e153d1.netlify.app/">Restzy</a></h2>
 <h2>Server Side Code: <a href="https://sunny-queijadas-e153d1.netlify.app/](https://github.com/mushfiq7297/Restzy-Hotel-Booking-Server">Server</a></h2>
 <h1>Project Overview:</h1>
-<p>Restzy is a tourism-focused website designed to help travelers explore and discover exciting destinations. This project aims to solve the problem of finding reliable and comprehensive travel information by providing detailed guides, reviews, and recommendations for various travel spots around the world.</p>
+<p>Travelo aims to provide a seamless and intuitive booking experience across devices, ensuring that users can effortlessly find and reserve hotel rooms that meet their preferences and needs. Leveraging cutting-edge technologies, we aim to enhance user experiences and set a new standard in the online hotel booking industry.</p>
 
 <h3>Features:</h3>
 <ul>
-  <li>Detailed Guides: Our in-depth guides provide everything you need to know about a destination, including attractions, accommodation options,cultural insights, and hidden gems.</li>
-  <li>Trusted Reviews: We offer honest reviews from fellow travelers, giving you a realistic picture of what to expect at different locations.</li>
-  <li>Curated Recommendations: Based on your interests and preferences, Restzy suggests destinations and experiences that are perfect for you.</li>
+  <li>User Authentication: Secure user authentication and authorization using Firebase and JWT tokens.</li>
+  <li>Room Availability and Booking: Real-time room availability checks and booking functionality, ensuring users can make reservations with confidence.</li>
+  <li>User Reviews and Ratings: Allow users to leave reviews and ratings for hotels, helping others make informed decisions.</li>
+  <li>Booking History: Users can view their booking history, manage current reservations, and make changes if needed.</li>
+  <li>Responsive Design: Optimized for both desktop and mobile devices to ensure a seamless experience across all platforms.</li>
 </ul>
 <h3>Technology used:</h3>
-<p>ReactJS | TailwindCSS | ExpressJS | MongoDB | JWT  |  Swiper | Axios
+<ul>
+  <li>React: For building a dynamic and responsive user interface.</li>
+  <li>Firebase: For user authentication and real-time database.</li>
+  <li>React Router: For handling navigation and routing within the application.</li>
+  <li>Node.js & Express: For server-side logic and API development.</li>
+  <li>MongoDB: For storing user data, articles, and other related information.</li>
+</ul>
 </p>
 
 <h3>Installation and Setup:</h3>
